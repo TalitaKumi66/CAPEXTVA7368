@@ -1,0 +1,112 @@
+﻿@model DTO.VentaDTO
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<section>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#nuevaVenta">
+        Nueva venta
+    </button>
+
+    <div class="modal fade" id="nuevaVenta" tabindex="-1" aria-labelledby="lblnuevaVenta" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="lblnuevaVenta">Añadir venta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    @using (Html.BeginForm("NuevaVenta", "Venta", FormMethod.Post))
+                    {
+                        <div>
+                            @Html.LabelFor(model => model.CLIENTE_ID)
+                            @Html.DropDownListFor(model => model.CLIENTE_ID, new SelectList(ViewBag.ListaClientes, "CLIENTE_ID", "NOMBRE"), new { @class = "form-control" })
+                        </div>
+                        <div>
+                            @Html.LabelFor(model => model.PRODUCTO_ID)
+                            @Html.DropDownListFor(model => model.PRODUCTO_ID, new SelectList(ViewBag.ListaProductos, "PRODUCTO_ID", "DESCRIPCION"), new { @class = "form-control" })
+                        </div>
+                        <div>
+                            @Html.LabelFor(model => model.CANTIDAD)
+                            @Html.TextBoxFor(model => model.CANTIDAD, new { @class = "form-control", @type = "number" })
+                            @Html.ValidationMessageFor(model => model.CANTIDAD, null)
+                        </div>
+                        <div style="text-align:right;">
+                            <input value="Guardar" class="btn btn-success" type="submit" />
+                        </div>
+                    }
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Clave Cliente</th>
+                <th>Cliente</th>
+                <th>Mail</th>
+                <th>Fecha de Venta</th>
+                <th>Total de la Venta</th>
+                <th>Detalle</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var venta in ViewBag.Ventas)
+            {
+                <tr>
+                    <td>@venta.Clave_Cliente</td>
+                    <td>@venta.Cliente</td>
+                    <td>@venta.Mail</td>
+                    <td>@venta.Fecha</td>
+                    <td>@venta.Total</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="@($"#detallesVenta{venta.ID}")">
+                            Detalles
+                        </button>
+                    </td>
+                </tr>
+
+                <div class="modal fade" id="@($"detallesVenta{venta.ID}")" tabindex="-1" aria-labelledby="lbldetallesVenta" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="lbldetallesVenta">Detalles de la venta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h6>Cliente:</h6>
+                                @venta.Cliente
+                                <br />
+                                <h6>Mail:</h6>
+                                @venta.Mail
+                                <br />
+                                <h6>Fecha:</h6>
+                                @venta.Fecha
+                                <br />
+                                <h6>Producto:</h6>
+                                @venta.Producto
+                                <br />
+                                <h6>Precio:</h6>
+                                @venta.Precio
+                                <br />
+                                <h6>Cantidad:</h6>
+                                @venta.Cantidad
+                                <br />
+                                <h6>Total:</h6>
+                                @venta.Total
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </tbody>
+    </table>
+
+</section>

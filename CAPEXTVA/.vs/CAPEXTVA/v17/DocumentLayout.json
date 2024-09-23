@@ -1,0 +1,124 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\CAPEXTVA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BCCE6B07-F152-436A-8059-7DC420184D5C}|..\\DTO\\DTO.csproj|c:\\users\\maxpo\\source\\repos\\capextva7368\\dto\\ventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A68232-743C-4EF2-BB76-1CCECFF6392C}|CAPEXTVA.csproj|C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\CAPEXTVA\\views\\venta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23A68232-743C-4EF2-BB76-1CCECFF6392C}|CAPEXTVA.csproj|solutionrelative:views\\venta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A68232-743C-4EF2-BB76-1CCECFF6392C}|CAPEXTVA.csproj|c:\\users\\maxpo\\source\\repos\\capextva7368\\capextva\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A68232-743C-4EF2-BB76-1CCECFF6392C}|CAPEXTVA.csproj|solutionrelative:controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A68232-743C-4EF2-BB76-1CCECFF6392C}|CAPEXTVA.csproj|c:\\users\\maxpo\\source\\repos\\capextva7368\\capextva\\models\\vista_ventas_clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A68232-743C-4EF2-BB76-1CCECFF6392C}|CAPEXTVA.csproj|solutionrelative:models\\vista_ventas_clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A68232-743C-4EF2-BB76-1CCECFF6392C}|CAPEXTVA.csproj|c:\\users\\maxpo\\source\\repos\\capextva7368\\capextva\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{23A68232-743C-4EF2-BB76-1CCECFF6392C}|CAPEXTVA.csproj|solutionrelative:models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23A68232-743C-4EF2-BB76-1CCECFF6392C}|CAPEXTVA.csproj|c:\\users\\maxpo\\source\\repos\\capextva7368\\capextva\\models\\detalle_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23A68232-743C-4EF2-BB76-1CCECFF6392C}|CAPEXTVA.csproj|solutionrelative:models\\detalle_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 285,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VISTA_VENTAS_CLIENTES.cs",
+              "DocumentMoniker": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\CAPEXTVA\\Models\\VISTA_VENTAS_CLIENTES.cs",
+              "RelativeDocumentMoniker": "Models\\VISTA_VENTAS_CLIENTES.cs",
+              "ToolTip": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\CAPEXTVA\\Models\\VISTA_VENTAS_CLIENTES.cs",
+              "RelativeToolTip": "Models\\VISTA_VENTAS_CLIENTES.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T07:35:01.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\CAPEXTVA\\Models\\Model1.edmx",
+              "RelativeDocumentMoniker": "Models\\Model1.edmx",
+              "ToolTip": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\CAPEXTVA\\Models\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "Models\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-09-23T06:40:17.895Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DETALLE_VENTA.cs",
+              "DocumentMoniker": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\CAPEXTVA\\Models\\DETALLE_VENTA.cs",
+              "RelativeDocumentMoniker": "Models\\DETALLE_VENTA.cs",
+              "ToolTip": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\CAPEXTVA\\Models\\DETALLE_VENTA.cs",
+              "RelativeToolTip": "Models\\DETALLE_VENTA.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T03:13:43.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VentaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\DTO\\VentaDTO.cs",
+              "RelativeDocumentMoniker": "..\\DTO\\VentaDTO.cs",
+              "ToolTip": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\DTO\\VentaDTO.cs",
+              "RelativeToolTip": "..\\DTO\\VentaDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T21:24:38.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VentaController.cs",
+              "DocumentMoniker": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\CAPEXTVA\\Controllers\\VentaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VentaController.cs",
+              "ToolTip": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\CAPEXTVA\\Controllers\\VentaController.cs",
+              "RelativeToolTip": "Controllers\\VentaController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowEgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T05:35:52.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\CAPEXTVA\\Views\\Venta\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Venta\\Index.cshtml",
+              "ToolTip": "C:\\Users\\maxpo\\source\\repos\\CAPEXTVA7368\\CAPEXTVA\\Views\\Venta\\Index.cshtml",
+              "RelativeToolTip": "Views\\Venta\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-22T21:30:43.946Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

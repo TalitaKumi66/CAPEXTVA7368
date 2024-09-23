@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAPEXTVA", "CAPEXTVA.csproj", "{23A68232-743C-4EF2-BB76-1CCECFF6392C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "..\DTO\DTO.csproj", "{BCCE6B07-F152-436A-8059-7DC420184D5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23A68232-743C-4EF2-BB76-1CCECFF6392C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A68232-743C-4EF2-BB76-1CCECFF6392C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A68232-743C-4EF2-BB76-1CCECFF6392C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A68232-743C-4EF2-BB76-1CCECFF6392C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCCE6B07-F152-436A-8059-7DC420184D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCCE6B07-F152-436A-8059-7DC420184D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCCE6B07-F152-436A-8059-7DC420184D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCCE6B07-F152-436A-8059-7DC420184D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7656E9B-5ED9-4EC3-9775-0ADC49B2C645}
+	EndGlobalSection
+EndGlobal

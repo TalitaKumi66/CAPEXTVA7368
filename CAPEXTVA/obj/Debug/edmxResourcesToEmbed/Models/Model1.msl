@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CAPEXTVAModelStoreContainer" CdmEntityContainer="CAPEXTVAEntities1">
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="CAPEXTVAModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="CLIENTE_ID" ColumnName="CLIENTE_ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_VENTA">
+      <EntityTypeMapping TypeName="CAPEXTVAModel.DETALLE_VENTA">
+        <MappingFragment StoreEntitySet="DETALLE_VENTA">
+          <ScalarProperty Name="VENTA_ID" ColumnName="VENTA_ID" />
+          <ScalarProperty Name="PRODUCTO_ID" ColumnName="PRODUCTO_ID" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTO">
+      <EntityTypeMapping TypeName="CAPEXTVAModel.PRODUCTO">
+        <MappingFragment StoreEntitySet="PRODUCTO">
+          <ScalarProperty Name="PRODUCTO_ID" ColumnName="PRODUCTO_ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="COSTO_UNITARIO" ColumnName="COSTO_UNITARIO" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENTA">
+      <EntityTypeMapping TypeName="CAPEXTVAModel.VENTA">
+        <MappingFragment StoreEntitySet="VENTA">
+          <ScalarProperty Name="VENTA_ID" ColumnName="VENTA_ID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="CLIENTE_ID" ColumnName="CLIENTE_ID" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VISTA_VENTAS_CLIENTES">
+      <EntityTypeMapping TypeName="CAPEXTVAModel.VISTA_VENTAS_CLIENTES">
+        <MappingFragment StoreEntitySet="VISTA_VENTAS_CLIENTES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="Clave_Cliente" ColumnName="Clave_Cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

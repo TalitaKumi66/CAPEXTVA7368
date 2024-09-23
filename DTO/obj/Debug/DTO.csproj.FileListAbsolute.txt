@@ -1,0 +1,6 @@
+C:\Users\maxpo\source\repos\CAPEXTVA7368\DTO\bin\Debug\DTO.dll
+C:\Users\maxpo\source\repos\CAPEXTVA7368\DTO\bin\Debug\DTO.pdb
+C:\Users\maxpo\source\repos\CAPEXTVA7368\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\maxpo\source\repos\CAPEXTVA7368\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\maxpo\source\repos\CAPEXTVA7368\DTO\obj\Debug\DTO.dll
+C:\Users\maxpo\source\repos\CAPEXTVA7368\DTO\obj\Debug\DTO.pdb

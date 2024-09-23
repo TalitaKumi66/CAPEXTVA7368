@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CAPEXTVAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="CLIENTE_ID" />
+    </Key>
+    <Property Name="CLIENTE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CLAVE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MAIL" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ESTATUS" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="VENTA" Relationship="Self.FK_CLIENTE" FromRole="CLIENTE" ToRole="VENTA" />
+  </EntityType>
+  <EntityType Name="DETALLE_VENTA">
+    <Key>
+      <PropertyRef Name="VENTA_ID" />
+      <PropertyRef Name="PRODUCTO_ID" />
+    </Key>
+    <Property Name="VENTA_ID" Type="Int32" Nullable="false" />
+    <Property Name="PRODUCTO_ID" Type="Int32" Nullable="false" />
+    <Property Name="CANTIDAD" Type="Int32" Nullable="false" />
+    <Property Name="DESCUENTO" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="TOTAL" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <NavigationProperty Name="PRODUCTO" Relationship="Self.FK_PRODUCTO" FromRole="DETALLE_VENTA" ToRole="PRODUCTO" />
+    <NavigationProperty Name="VENTA" Relationship="Self.FK_VENTA" FromRole="DETALLE_VENTA" ToRole="VENTA" />
+  </EntityType>
+  <EntityType Name="PRODUCTO">
+    <Key>
+      <PropertyRef Name="PRODUCTO_ID" />
+    </Key>
+    <Property Name="PRODUCTO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="COSTO_UNITARIO" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="ESTATUS" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DETALLE_VENTA" Relationship="Self.FK_PRODUCTO" FromRole="PRODUCTO" ToRole="DETALLE_VENTA" />
+  </EntityType>
+  <EntityType Name="VENTA">
+    <Key>
+      <PropertyRef Name="VENTA_ID" />
+    </Key>
+    <Property Name="VENTA_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CLIENTE_ID" Type="Int32" Nullable="false" />
+    <Property Name="ESTATUS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.FK_CLIENTE" FromRole="VENTA" ToRole="CLIENTE" />
+    <NavigationProperty Name="DETALLE_VENTA" Relationship="Self.FK_VENTA" FromRole="VENTA" ToRole="DETALLE_VENTA" />
+  </EntityType>
+  <Association Name="FK_CLIENTE">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="CLIENTE_ID" />
+      </Principal>
+      <Dependent Role="VENTA">
+        <PropertyRef Name="CLIENTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTO">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+    <End Role="DETALLE_VENTA" Type="Self.DETALLE_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTO">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Principal>
+      <Dependent Role="DETALLE_VENTA">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VENTA">
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="1" />
+    <End Role="DETALLE_VENTA" Type="Self.DETALLE_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VENTA">
+        <PropertyRef Name="VENTA_ID" />
+      </Principal>
+      <Dependent Role="DETALLE_VENTA">
+        <PropertyRef Name="VENTA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CAPEXTVAEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
+    <EntitySet Name="DETALLE_VENTA" EntityType="Self.DETALLE_VENTA" />
+    <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" />
+    <EntitySet Name="VENTA" EntityType="Self.VENTA" />
+    <AssociationSet Name="FK_CLIENTE" Association="Self.FK_CLIENTE">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="VENTA" EntitySet="VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTO" Association="Self.FK_PRODUCTO">
+      <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+      <End Role="DETALLE_VENTA" EntitySet="DETALLE_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VENTA" Association="Self.FK_VENTA">
+      <End Role="VENTA" EntitySet="VENTA" />
+      <End Role="DETALLE_VENTA" EntitySet="DETALLE_VENTA" />
+    </AssociationSet>
+    <EntitySet Name="VISTA_VENTAS_CLIENTES" EntityType="CAPEXTVAModel.VISTA_VENTAS_CLIENTES" />
+  </EntityContainer>
+  <EntityType Name="VISTA_VENTAS_CLIENTES">
+    <Key>
+      <PropertyRef Name="Clave_Cliente" />
+      <PropertyRef Name="Cliente" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Producto" />
+      <PropertyRef Name="Precio" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="Total" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Clave_Cliente" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Cliente" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Mail" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Producto" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Precio" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="Total" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>
